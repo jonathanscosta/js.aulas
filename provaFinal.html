@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+
+    <link rel="stylesheet" href="provaFinal.css">
+    <script src="provaFinal.js" defer></script>
+    <script src="provaFinal2.js" defer></script>
+
+    
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+
+    <main class="container">
+
+        <header>
+            <h1>📝 Minha To-Do List</h1>
+            <p>Organize suas tarefas de forma simples.</p>
+        </header>
+
+   
+        <section class="nova-tarefa">
+
+            <form id="formTarefa">
+
+                <input
+                    type="text"
+                    id="inputTarefa"
+                    placeholder="Digite uma nova tarefa..."
+                    required>
+
+                <button type="submit">
+                    <i class="fa-solid fa-plus"></i>
+                    Adicionar
+                </button>
+
+            </form>
+
+        </section>
+
+        <section>
+
+            <p id="mensagem"></p>
+
+        </section>
+
+        
+        <section class="contador">
+
+            <span id="totalTarefas">
+                Total de tarefas: 0
+            </span>
+
+        </section>
+
+        <!-- Filtros -->
+        <section class="filtros">
+
+            <button id="todas" class="ativo">
+                Todas
+            </button>
+
+            <button id="pendentes">
+                Pendentes
+            </button>
+
+            <button id="concluidas">
+                Concluídas
+            </button>
+
+        </section>
+
+        
+        <section>
+
+            <ul id="listaTarefas">
+
+                <!-- Exemplo
+
+                <li class="tarefa">
+
+                    <input type="checkbox">
+
+                    <span class="texto">
+                        Estudar JavaScript
+                    </span>
+
+                    <div class="acoes">
+
+                        <button class="editar">
+                            <i class="fa-solid fa-pen"></i>
+                        </button>
+
+                        <button class="excluir">
+                            <i class="fa-solid fa-trash"></i>
+                        </button>
+
+                    </div>
+
+                </li>
+
+                -->
+
+            </ul>
+
+        </section>
+
+        <footer>
+
+            <button id="limparConcluidas">
+                Limpar Concluídas
+            </button>
+
+        </footer>
+
+    </main>
+
+    
+
+</body>
+
+</html>

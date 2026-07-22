@@ -1,0 +1,314 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+
+
+.container {
+    width: 100%;
+    max-width: 700px;
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.2);
+}
+
+
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: #666;
+}
+
+
+
+#formTarefa{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#inputTarefa{
+    flex: 1;
+    padding: 12px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: .3s;
+}
+
+#inputTarefa:focus{
+    border-color: #4facfe;
+}
+
+
+
+button{
+    cursor: pointer;
+    border: none;
+    transition: .3s;
+}
+
+#formTarefa button{
+    padding: 12px 20px;
+    background: #4facfe;
+    color: white;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+#formTarefa button:hover{
+    background: #2389f7;
+}
+
+
+
+.contador{
+    margin: 20px 0;
+    text-align: center;
+    font-weight: bold;
+    color: #444;
+}
+
+
+
+.filtros{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.filtros button{
+    padding: 8px 16px;
+    border-radius: 6px;
+    background: #ddd;
+    color: #333;
+}
+
+.filtros button:hover{
+    background: #bbb;
+}
+
+.filtros .ativo{
+    background: #4facfe;
+    color: white;
+}
+
+
+
+#listaTarefas{
+    list-style: none;
+}
+
+
+
+.tarefa{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+
+    background: #f8f8f8;
+
+    padding: 15px;
+
+    margin-bottom: 15px;
+
+    border-radius: 10px;
+
+    transition: .3s;
+}
+
+.tarefa:hover{
+    transform: scale(1.01);
+    box-shadow: 0 5px 15px rgba(0,0,0,.15);
+}
+
+
+
+.texto{
+    flex: 1;
+    font-size: 17px;
+    color: #333;
+}
+
+
+
+.concluida{
+
+    background: #d4edda;
+
+}
+
+.concluida .texto{
+
+    text-decoration: line-through;
+
+    color: #777;
+
+}
+
+
+
+.tarefa input[type="checkbox"]{
+
+    width: 20px;
+
+    height: 20px;
+
+    cursor: pointer;
+
+}
+
+
+
+.acoes{
+
+    display: flex;
+
+    gap: 10px;
+
+}
+
+.editar,
+.excluir{
+
+    width: 40px;
+
+    height: 40px;
+
+    border-radius: 50%;
+
+    color: white;
+
+    font-size: 15px;
+
+}
+
+.editar{
+
+    background: #ffc107;
+
+}
+
+.editar:hover{
+
+    background: #e0a800;
+
+}
+
+.excluir{
+
+    background: #dc3545;
+
+}
+
+.excluir:hover{
+
+    background: #bb2d3b;
+
+}
+
+/* ========================= */
+/* LIMPAR */
+/* ========================= */
+
+footer{
+
+    margin-top: 30px;
+
+    text-align: center;
+
+}
+
+#limparConcluidas{
+
+    padding: 12px 20px;
+
+    background: #dc3545;
+
+    color: white;
+
+    border-radius: 8px;
+
+}
+
+#limparConcluidas:hover{
+
+    background: #bb2d3b;
+
+}
+
+
+
+#mensagem{
+
+    text-align: center;
+
+    font-weight: bold;
+
+    color: red;
+
+    margin-bottom: 20px;
+
+}
+
+
+
+@media(max-width:600px){
+
+    #formTarefa{
+
+        flex-direction: column;
+
+    }
+
+    #formTarefa button{
+
+        width: 100%;
+
+    }
+
+    .tarefa{
+
+        flex-wrap: wrap;
+
+    }
+
+    .acoes{
+
+        width: 100%;
+
+        justify-content: flex-end;
+
+    }
+
+}
