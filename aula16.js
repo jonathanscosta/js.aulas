@@ -7,9 +7,9 @@ let filmes = [];
 
 async function pegarFilmes() {
 
-    const response = await fetch(API);
+    const resposta = await fetch(API);
 
-    filmes = await response.json();
+    filmes = await resposta.json();
 
     renderFilmes(filmes);
 
